@@ -55,6 +55,18 @@ export default {
             options: { minimize: true }
           }
         ]
+      },
+      {
+        test: /\.(png|jpe?g|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // name: 'img/[name]_[hash:7].[ext]'
+              name: '[path][name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
