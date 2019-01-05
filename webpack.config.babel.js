@@ -62,8 +62,7 @@ export default {
           {
             loader: 'file-loader',
             options: {
-              // name: 'img/[name]_[hash:7].[ext]'
-              name: '[path][name].[ext]'
+              name: 'img/[name]_[hash:7].[ext]'
             }
           }
         ]
