@@ -12,9 +12,7 @@ module.exports = {
     "import",
     "react",
     "prettier",
-    
     "jest",
-    
     "jsx-a11y"
   ],
   "extends": [
