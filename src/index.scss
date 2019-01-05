@@ -1,6 +1,5 @@
 @import "~normalize-scss/sass/normalize/import-now";
 @import "~leaflet/dist/leaflet.css";
-@import "~bootstrap/scss/bootstrap";
 
 html,
 body,
@@ -8,8 +7,4 @@ main,
 #root,
 .leaflet-container {
   height: 100%;
-
-  @include media-breakpoint-up(md) {
-    height: calc(100% - 10px);
-  }
 }
