@@ -1,7 +1,7 @@
 {
   "name": "atlas-map",
   "version": "0.1.0",
-  "description": "Tiled web map for Atlas server grids",
+  "description": "Tiled web map for ATLAS server grids",
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
   "scripts": {
