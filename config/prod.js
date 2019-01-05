@@ -1,3 +1,3 @@
 export default {
-  baseUrl: 'http://example.net'
+  baseUrl: 'http://example.net/base'
 };
