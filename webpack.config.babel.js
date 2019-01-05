@@ -95,7 +95,10 @@ export default {
   ],
   resolve: {
     extensions: ['.js', '.json'],
-    modules: ['node_modules', 'src']
+    modules: ['node_modules', 'src'],
+    alias: {
+      config: path.join(__dirname, 'config', dev ? 'dev.js' : 'prod.js')
+    }
   },
   optimization: {
     minimizer: [
