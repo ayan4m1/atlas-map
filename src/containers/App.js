@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 
 export class App extends Component {
   get heading() {
@@ -13,21 +13,12 @@ export class App extends Component {
   }
 
   get map() {
-    const position = [40.102063, -75.171021];
-
     return (
-      <Map className="h-100" center={position} zoom={10}>
+      <Map className="h-100" center={[0, 0]} zoom={1}>
         <TileLayer
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="http://localhost:8080/base/{z}/{x}/{y}.png"
+          attribution='<a href="http://playatlas.com">ATLAS</a> &copy; Grapeshot Games'
         />
-        <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup.
-            <br />
-            Easily customizable.
-          </Popup>
-        </Marker>
       </Map>
     );
   }
