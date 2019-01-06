@@ -12,6 +12,10 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ayan4m1/atlas-map.git"
+  },
   "dependencies": {
     "leaflet": "^1.4.0",
     "normalize-scss": "^7.0.1",
