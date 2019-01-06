@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 
 import './leaflet.js';
 import './index.scss';
-import App from './containers/App';
+import App from './components/App';
 
 render(<App />, document.getElementById('root'));
 
