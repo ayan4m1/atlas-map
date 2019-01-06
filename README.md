@@ -61,6 +61,7 @@ If the map UI loads but there are no tile images, there is some disconnect betwe
 
 ## Roadmap
 
+* Unit tests
 * Coordinates
 * Grid overlay
 * Nautical units
