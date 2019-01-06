@@ -59,6 +59,16 @@ If your browser window is entirely white, there is likely a JS error in the cons
 
 If the map UI loads but there are no tile images, there is some disconnect between the tile server and your browser. Look at the network monitor for image requests with URLs like `.../0/0/0.webp`. If you are getting a connection reset or request timeout here then check the tile server URL in the config JS file appropriate for your run mode - it must match the port and address that your tile server is listening on. If you are getting 404, 403, 500, or similar, then look at the server response and the tile server logs to see why it is not serving the images up.
 
+## Roadmap
+
+* Coordinates
+* Grid overlay
+* Nautical units
+* Bearing calculator
+* Select from multiple instances
+* Measure distance by drawing polyline
+* Estimate sailing time by drawing polyline
+
 ## Dependencies
 
 This project uses the following libraries:
