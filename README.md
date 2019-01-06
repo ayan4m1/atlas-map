@@ -1,6 +1,6 @@
 # ATLAS Map
 
-This project provides one half of a simple and flexible system for displaying a [slippy map](https://en.wikipedia.org/wiki/Tiled_web_map) of an [ATLAS](http://playatlas.com) server grid. Its companion project is [ATLAS Tile Server](https://github.com/ayan4m1/atlas-tile-server).
+This project provides one half of a system for displaying a [slippy map](https://en.wikipedia.org/wiki/Tiled_web_map) of an [ATLAS](http://playatlas.com) server grid. Its companion project is [ATLAS Tile Server](https://github.com/ayan4m1/atlas-tile-server).
 
 This project requires Node.js version 10 or greater.
 
