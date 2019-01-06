@@ -51,6 +51,14 @@ npm run build
 
 This will create a `dist/` folder which contains the static assets that make up the site. You are free to use whatever web server you want to host these. The configuration file `config/prod.js` is "baked in" to these assets. In an advanced setup, you would be leveraging caching, compression, TLS termination, load balancing and high availability features. Some of these things may not make sense for your use case - it's up to you to assess your requirements and determine the technologies that best meet those needs.
 
+## Troubleshooting
+
+If some aspect of your map is not behaving as you expect, the first thing you should do is press F12 or otherwise open your browser's developer tools. The JavaScript console and the network monitor are the two places that most errors will surface.
+
+If your browser window is entirely white, there is likely a JS error in the console. Make sure all static resource requests are not returning error response codes like 403 or 500. Check the web server logs to see why it is not serving the resources.
+
+If the map UI loads but there are no tile images, there is some disconnect between the tile server and your browser. Look at the network monitor for image requests with URLs like `.../0/0/0.webp`. If you are getting a connection reset or request timeout here then check the tile server URL in the config JS file appropriate for your run mode - it must match the port and address that your tile server is listening on. If you are getting 404, 403, 500, or similar, then look at the server response and the tile server logs to see why it is not serving the images up.
+
 ## Dependencies
 
 This project uses the following libraries:
