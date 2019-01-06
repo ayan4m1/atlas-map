@@ -1,3 +1,3 @@
 export default {
-  baseUrl: 'http://localhost:8080/base'
+  tileServerUrl: 'http://localhost:8080/base'
 };

@@ -1,3 +1,3 @@
 export default {
-  baseUrl: 'http://example.net/base'
+  tileServerUrl: 'http://example.net/base'
 };
