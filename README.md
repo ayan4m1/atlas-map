@@ -2,6 +2,8 @@
 
 This project provides one half of a simple and flexible system for displaying a [slippy map](https://en.wikipedia.org/wiki/Tiled_web_map) of an [ATLAS](http://playatlas.com) server grid. Its companion project is [ATLAS Tile Server](https://github.com/ayan4m1/atlas-tile-server).
 
+This project requires Node.js version 10 or greater.
+
 ## Usage
 
 First, set up an ATLAS tile server. The rest of this document will assume that you have configured your tile server to be publicly accessible at `http://localhost:8080/map`.
@@ -51,8 +53,20 @@ This will create a `dist/` folder which contains the static assets that make up 
 
 ## Dependencies
 
-This project makes use of the following libraries:
+This project uses the following libraries:
 
- * React
- * Leaflet
- * Bootstrap
+* [React](https://reactjs.org)
+* [Leaflet](https://leafletjs.com)
+* [React-Leaflet](https://react-leaflet.js.org/)
+
+## Development Dependencies
+
+This project uses the following tools:
+
+* [Babel](https://babeljs.io/)
+* [ESLint](https://eslint.org/)
+* [Webpack](http://webpackjs.org)
+* [stylelint](https://stylelint.io/)
+* [node-sass](https://www.npmjs.com/package/node-sass)
+* [Prettier](https://github.com/prettier/prettier#intro)
+* [lint-staged](https://www.npmjs.com/package/lint-staged)
