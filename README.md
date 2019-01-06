@@ -4,7 +4,7 @@ This project provides one half of a simple and flexible system for displaying a 
 
 ## Usage
 
-First, set up an ATLAS Tile Server. The rest of this document will assume that you have configured your tile server to be publicly accessible at `http://localhost:8080/map`.
+First, set up an ATLAS tile server. The rest of this document will assume that you have configured your tile server to be publicly accessible at `http://localhost:8080/map`.
 
 Now, clone this repository and run:
 
@@ -12,11 +12,9 @@ Now, clone this repository and run:
 npm install
 ```
 
-This software is meant to be run in one of two modes - development and production.
+This software is meant to be run in one of two modes - development or production. Development mode uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server#webpack-dev-server) to spin up a live-reloading, source-mapped, unoptimized HTTP server that lives in a terminal window. Production mode uses [webpack](https://webpack.js.org/concepts/) to build a minified, optimized bundle of files which can be hosted by anything that a web browser can talk to.
 
-Development mode uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server#webpack-dev-server) to spin up a live-reloading, source-mapped, unoptimized HTTP server that lives in a terminal window.
-
-Production mode uses [webpack](https://webpack.js.org/concepts/) to build a minified, optimized bundle of files which can be hosted by anything that a web browser can talk to. In either mode, you _must_ also run a tile server which is accessible to your users.
+In either mode, you **must** also run a tile server which is accessible to your users.
 
 Choose development mode **if**:
 
