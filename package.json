@@ -4,6 +4,9 @@
   "description": "Tiled web map for ATLAS server grids",
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
