@@ -70,6 +70,10 @@ If the map UI loads but there are no tile images, there is some disconnect betwe
 * Measure distance by drawing polyline
 * Estimate sailing time by drawing polyline
 
+## Contributing
+
+Please refer to our [Contribution Guidelines](/.github/CONTRIBUTING.md).
+
 ## Dependencies
 
 This project uses the following libraries:

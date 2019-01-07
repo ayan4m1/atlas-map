@@ -1,33 +1,24 @@
-**Describe the bug**
+## Observed behavior
 
-Please describe your issue. More context and information saves diagnostic time and effort. Try to touch on each of these points:
+Describe your issue - what you were doing before it occurred, the occurence itself, and anything you tried or observed afterwards. More context and information saves diagnostic time and effort. Provide exact error messages, console output, or screenshots when relevant.
 
-* What you were trying to accomplish
-* What you tried to do (the inputs)
-* Any commands you executed
-* What happened (the output)
-* Any error messages / console output you observed
+## Expected behavior
 
-**Environment:**
+Provide a clear and concise description of what you expected to happen.
 
- - OS and version:
- - Browser (if applicable) and version:
+## Steps to reproduce
 
-**Configuration**
+List the minimum steps required for issue to occur.
+ 1. Go to '...'
+ 2. Click on '....'
+ 3. Scroll down to '....'
+ 4. See error
 
-Please provide a list of the following:
+## Environment
 
-* Any changes you have made to the source code
-* Any changes you have made to the configuration
+ * OS and version:
+ * Browser (if applicable) and version:
+ * Development or production: Dev/Prod
+ * Tile server and version:
 
-**Reproduction**
-
-List the steps that must be taken for the bug to occur.
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-
-Please provide a clear and concise description of what you expected to happen.
+If you are using a reverse proxy, software firewall, load balancer; anything that sits between your browser and the static assets that `npm run build` creates - mention it here!
