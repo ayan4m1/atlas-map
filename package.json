@@ -17,6 +17,7 @@
     "url": "git@github.com:ayan4m1/atlas-map.git"
   },
   "dependencies": {
+    "@marfle/react-leaflet-nmscale": "^1.0.0",
     "leaflet": "^1.4.0",
     "normalize-scss": "^7.0.1",
     "prop-types": "^15.6.2",
