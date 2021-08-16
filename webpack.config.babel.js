@@ -1,17 +1,17 @@
 import path from 'path';
 import webpack from 'webpack';
-import CleanPlugin from 'clean-webpack-plugin';
+import { CleanWebpackPlugin as CleanPlugin } from 'clean-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 
 const dev = process.env.NODE_ENV === 'development';
 
 export default {
   mode: dev ? 'development' : 'production',
-  devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
+  devtool: dev ? 'eval-cheap-module-source-map' : 'cheap-module-source-map',
   entry: './src/index.js',
   devServer: {
     compress: dev,
@@ -36,11 +36,13 @@ export default {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [
-                require('autoprefixer'),
-                require('postcss-flexbugs-fixes')
-              ],
+              postcssOptions: {
+                ident: 'postcss',
+                plugins: [
+                  require('autoprefixer'),
+                  require('postcss-flexbugs-fixes')
+                ]
+              },
               sourceMap: dev
             }
           },
@@ -71,11 +73,11 @@ export default {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].js',
     chunkFilename: '[name].js'
   },
   plugins: [
-    new CleanPlugin(['dist']),
+    new CleanPlugin(),
     new StylelintPlugin({
       configFile: '.stylelintrc',
       context: 'src',
@@ -100,14 +102,7 @@ export default {
     }
   },
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: dev
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
     splitChunks: {
       cacheGroups: {
         default: false,
